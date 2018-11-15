@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/style_layout.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 logo">
+                <a href="#"><img src="~/Views/images/logo_layout.png" class="img-responsive"></a>
+            </div>
+            <div class="col-lg-9 thongtin">
+                <h1>
+                    TRƯỜNG CAO ĐẲNG CÔNG NGHỆ THỦ ĐỨC
+                </h1>
+                <div class="solid">
+
+                </div>
+                <p>
+                    Địa chỉ:53 Võ Văn Ngân - Phường Bình Chiểu - Quận Thủ Đức - TP.HCM
+                </p>
+                <p>
+                    Điện thoại: 08.38970023 - 08.38972339. Fax:08.38963474
+                </p>
+            </div>
+
+            <div class="clear-fix"></div>
+
+            <div class="nav_main">
+                <ul>
+                    <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Chương trình đào tạo", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Các học phần", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Văn bản", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Tra cứu văn bằng", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Hướng dẫn", "Index", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="clear-fix">
+        <div class="col-lg-3">
+            <div class="">
+                <div class="row">
+                    <div class="nav-height">
+                        <ul>
+                            <li id="nav-new"><img src="images/icon_wifi.png">Tin tức</li>
+                            <li>@Html.ActionLink("Sổ tay sinh viên", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông báo chung", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông báo đăng ký sách", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông báo đăng ký học phí", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Khen thưởng - Kỷ luật", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông báo miễn, giảm học phí", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông báo nghiên cứu khoa học", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Lịch thi kết thúc học phần", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Thông tin tốt nghiệp", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Biểu mẫu", "Index", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+    </div>
+    
+    <div class="container body-content">
+        
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - <a href="https://www.facebook.com/profile.php?id=100006785384859">My Team ASP.NET Application - Book registration software</a></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+    
